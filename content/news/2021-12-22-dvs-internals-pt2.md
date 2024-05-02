@@ -167,7 +167,7 @@ In this step, both bits have the value `0`, so *x = s<sub>1</sub> + s<sub>0</sub
 Next, we need to shift everything to the right, and insert *x = 0* on the left.
 The output bit is *0*, because that is the rightmost bit that is "pushed out" of the register.
 
-In the next step, the feedback bit is *x = s<sub>1</sub> + s<sub>0</sub> = 1 + 0 = 0*.
+In the next step, the feedback bit is *x = s<sub>1</sub> + s<sub>0</sub> = 1 + 0 = 1*.
 Note that this time *s<sub>1</sub>* has the value *1* because we shifted the register to the right in the previous step and *1* moved from *s<sub>2</sub>* to *s<sub>1</sub>*.
 Now that we calculated *x*, we again shift the whole register to the right and write the feedback bit into the leftmost position.
 The output bit is *0*.
@@ -208,7 +208,7 @@ Let's check how that can be used to solve the problem at hand.
 #### LFSR output as timecode signal
 
 In each step of the LFSR example above, we get exactly one output bit (the rightmost bit of the LFSR that is "pushed out").
-The exampe has six steps, thus we also get 6 output bits:
+The example has six steps, thus we also get 6 output bits:
 
     0 0 1 0 1 1
 
@@ -262,7 +262,7 @@ For the Serato Timecode CD bit sequence, the algorithm finds the following LFSR:
 We also have to find the correct seed (initial bit state for the LFSR), but this is trivial:
 
 We know the first 20 bits of the timecode (e.g. by simply looking at the waveform) and we also know that this bit sequence is unique.
-First, we selecting a random non-zero bit sequence as initial LFSR state and then step through the LFSR states while comparing the output of the LFSR with these first 20 bits of timecode bit sequence.
+First, we select a random non-zero bit sequence as initial LFSR state and then step through the LFSR states while comparing the output of the LFSR with these first 20 bits of timecode bit sequence.
 As soon as we see these 20 bits, we just go back 20 steps to the LFSR state *before* the first bit of that sequence appeared in the output.
 This is the seed.
 
