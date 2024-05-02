@@ -239,11 +239,11 @@ The Serato Control CD has a play time of approximately 16 minutes 20 seconds, or
 At a timecode frequency of 1000 Hz (cycles per second), we have 980,000 cycles.
 Every cycle encodes one bit, therefore we need an LFSR with an output length of at least 980,000 bits before it starts to repeat.
 
-At most, an n-bit LFSR can output 2<sup>n - 1</sup> bits before it starts to repeat.
+At most, an n-bit LFSR can output 2<sup>n</sup> - 1 bits before it starts to repeat.
 An LFSR with such a period size is called a maximal-length LFSR, and we already mentioned that Serato states that it uses a such an LFSR on the packaging of its timecode media.
 
 The smallest possible LFSR that can output at least 980,000 bits without starting to repeat needs at least 20 bits of state.
-A 19-bit LFSR is too small, because 2<sup>19</sup> - 1 = 524,288 is less than 980,000, but a 20-bit LFSR can output up to 1048575 bits before it starts to repeat.
+A 19-bit LFSR is too small, because 2<sup>19</sup> - 1 = 524,287 is less than 980,000, but a 20-bit LFSR can output up to 1048575 bits before it starts to repeat.
 We don't want to make the LFSR larger than absolutely necessary, because the larger the register, the more bits we need to read before we can detect a position after a needle drop.
 Hence, increasing the LFSR's size also increases the latency.
 
