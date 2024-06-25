@@ -2,7 +2,7 @@ title: Mixxx 2.5 beta released
 authors: Evelynne Veys
 tags: 2.5, beta, release announcement
 comments: yes
-status: draft
+date: 2024-06-25 07:17:16
 
 
 It's springtime, and baby birds recently hatched from their eggs are looking out of their nests deciding if they are ready to fly. So too it is with Mixxx, and version 2.5 is almost ready to greet the world.
