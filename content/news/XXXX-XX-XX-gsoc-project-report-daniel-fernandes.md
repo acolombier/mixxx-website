@@ -1,4 +1,4 @@
-title: GSoC 2024 Project Report - Harmonic Mixing Enhancements
+title: GSoC 2024 Project Report - Harmonic Mixing Enhancements (Part 1)
 authors: Daniel Fernandes
 status: draft
 tags: gsoc, harmonic mixing
@@ -6,13 +6,13 @@ comments: yes
 
 ## Introduction
 
-This project aims to make selecting songs from the library a faster and enjoyable process, specially for Harmonic Mixing. It is split into three new features for the Track Library that aim to let users find compatible tracks at a glance:
-1) Color coding the Key column of the track list.
-2) Highlights in the BPM column for tracks that have a tempo close to a target track.
-3) New Track Similarity Column, which uses the Key and BPM to compute how well two tracks work together.
+This project levels up your Harmonic Mixing workflow in Mixxx by adding these new features to help you find compatible tracks at glance:
 
-## Motivation
+1. Color coding the Key column of the track list.
+2. Highlights in the BPM column for tracks that have a tempo close to a target track.
+3. New Track Similarity Column, which uses the Key and BPM to compute how well two tracks work together.
 
+We just added the Track Color Coding feature. In this post, I will share what this process was like so far, and where you can try the feature out. 
 
 ## Project Planning
 
@@ -47,3 +47,7 @@ A *Mixxx Key Color Palette* was also created, based on the colors from the Mixxx
 To allow users to turn the feature off, a checkbox was added to toggle the Key colors.
 
 [mixxx#13390](https://github.com/mixxxdj/mixxx/pull/13390)
+
+## Where to try it out
+
+This feature is now available in the [Alpha versions](https://mixxx.org/download/#testing) of Mixxx. We would greatly appreciate any testing, and if you find bugs, please do let us know in the GitHub Issues. 
