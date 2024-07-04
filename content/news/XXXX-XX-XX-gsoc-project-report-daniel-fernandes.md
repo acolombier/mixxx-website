@@ -16,9 +16,7 @@ We just added the color code key column feature (1.). In this post, I will share
 
 ## Project Planning
 
-Before diving into the coding, my mentor recommended that we create a plan for the project and solve any open questions that were remaining.
-
-We used Zulip to get feedback and find use cases from the community to better understand the needs of Mixxx' users. We particularly wanted to find clarity for the Track Similarity Column. After some discussion I made a design doc which gave us a concrete plan and made it easier to decide on the finishing details.
+We used Zulip to get feedback and find use cases from the community to better understand the needs of Mixxx' users, which was important for solving some open questions. We particularly wanted to find clarity for the Track Similarity Column. After some discussion I made a design doc which gave us a concrete plan and made it easier to decide on the finishing details.
 
 [mixxxdj/proposals#5](https://github.com/mixxxdj/proposals/pull/5)
 
