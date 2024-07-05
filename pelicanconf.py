@@ -269,6 +269,12 @@ AUTHOR_METADATA = {
         "email": "Evelynne@protonmail.com",
         "tagline": "Enthusiastic Mixxx-er",
     },
+    "Daniel Fernandes": {
+        "github": "danferns",
+        "discourse": "danferns",
+        "email": "dannywritescode@gmail.com",
+        "tagline": "GSoC 2024 Student",
+    },
 }
 
 # Needed for Jinja2 markdown filter
