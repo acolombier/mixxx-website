@@ -12,7 +12,7 @@ This project levels up your Harmonic Mixing workflow in Mixxx by adding these ne
 2. Highlights in the BPM column for tracks that have a tempo close to a target track.
 3. New Track Similarity Column, which uses the Key and BPM to compute how well two tracks work together.
 
-We just added the color code key column feature (1.). In this post, I will share what this process was like so far, and where you can try the feature out. 
+We just added the color code key column feature (1.). In this post, I will share what this process was like so far, and where you can try the feature out.
 
 ## Project Planning
 
@@ -48,4 +48,4 @@ To allow users to turn the feature off, a checkbox was added to toggle the Key c
 
 ## Where to try it out
 
-This feature is now available in the [Alpha versions](https://mixxx.org/download/#testing) of Mixxx. We would greatly appreciate any testing, and if you find bugs, please do let us know in the GitHub Issues. 
+This feature is now available in the [Alpha versions](https://mixxx.org/download/#testing) of Mixxx. We would greatly appreciate any testing, and if you find bugs, please do let us know in the GitHub Issues.
