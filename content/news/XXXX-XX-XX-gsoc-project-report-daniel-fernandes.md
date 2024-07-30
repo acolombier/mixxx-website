@@ -46,6 +46,20 @@ To allow users to turn the feature off, a checkbox was added to toggle the Key c
 
 [mixxx#13390](https://github.com/mixxxdj/mixxx/pull/13390)
 
+## Key Color Palettes
+
+We added several color palettes for the key column that you can choose from. This includes palettes from third party software, so you can keep using the colors you're used to, as well as accessible color palettes optimized for the three broad types of color blindness: [Protanopia](https://davidmathlogic.com/colorblind/#%232626D9-%237582D7-%23A7C2DD-%23B8E0E0-%23A7DDC2-%2375D782-%2326D926-%230DA522-%2302783D-%23006666-%23023D78-%230D22A5) (red-blind), [Deuteranopia](https://davidmathlogic.com/colorblind/#%23D92626-%23D77582-%23DDA7C2-%23E0B8E0-%23C2A7DD-%238275D7-%232626D9-%23220DA5-%233D0278-%23660066-%2378023D-%23A50D22) (green-blind), and [Tritanopia](https://davidmathlogic.com/colorblind/#%2326D926-%2382D775-%23C2DDA7-%23E0E0B8-%23DDC2A7-%23D78275-%23D92626-%23A5220D-%23783D02-%23666600-%233D7802-%2322A50D) (blue-blind).
+
+![Accessible Key Colors]({static}/images/news/accessible_key_colors.png)
+
+We used 1/3 of hues for each palette, changing the hue vertically and changing the brightness and saturation horizontally when the colors are arranged in a circle. This ensures that every region on the circle has a distinct color, and that the change in colors is nearly uniform.
+
+You can find the code written to generate these palettes [here](https://svelte.dev/repl/b65bda7e6a53487880a08726bfb2da7e?version=4.2.18).
+
+We have tested that these work well in simulators. However, we are not done until we get feedback / confirmation from the users who would benefit from these palettes. If that's you, please reach out!
+
+[mixxx#13497](https://github.com/mixxxdj/mixxx/pull/13497)
+
 ## Where to try it out
 
 This feature is now available in the [Alpha versions](https://mixxx.org/download/#testing) of Mixxx. We would greatly appreciate any testing, and if you find bugs, please do let us know in the GitHub Issues.
