@@ -6,7 +6,7 @@ comments: yes
 
 ## Introduction
 
-This project levels up your Harmonic Mixing workflow in Mixxx by adding these new features to help you find compatible tracks at glance:
+We're excited to share progress on the Harmonic Mixing Enhancements project, which adds these new features to make finding compatible tracks a breeze:
 
 1. Color coding the Key column of the track list.
 2. Highlights in the BPM column for tracks that have a tempo close to a target track.
