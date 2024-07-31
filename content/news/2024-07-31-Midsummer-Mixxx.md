@@ -49,11 +49,11 @@ Some need you to upload your original file, some can use your GPU, some use well
 On Zulip I wrote a report about my quest for stems.
 
 In development Mixxx is already at the point that lossy and lossless stems can be played and controlled as stems, stem controls are already 
-working an can be experimental mapped in controller mappings. 
+working and can be experimental mapped in controller mappings. 
 
 DJ-ing with stems is a gamechanger, it takes away limitations, gives your creativity a boost.
 A hint: controlling stems with the mouse is rather difficult, some controllers are already stems-ready which means they incormporated
-volume encoders and mute buttons for the different stem tracks. But don't throw away you're valuable controller. 
+volume encoders and mute buttons for the different stem tracks. But don't throw away your valuable controller. 
 I have experimented successfull creating a OSC midi controller to control stems (and samplers) from a tablet, when finished the files will be available.
 Or you can start looking for an extra midi-controller that has enough encoders to control the volume and mute buttons of the stems (advice: 4 encoders, 4 mute buttons maybe encoders for the effect on the stem-track and buttons to select the deck).
 
