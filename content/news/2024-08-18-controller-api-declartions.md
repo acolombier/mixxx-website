@@ -1,7 +1,7 @@
 title: Controller API declarations for JavaScript mapping developers
 authors: Jörg Wartenberg
-status: draft
 tags: 2.4, controller
+date: 2024-08-18 16:57:58
 
 
 If the support of a DJ controller requires more than the semantic 1:1 mapping of MIDI codes, Mixxx offers the possibility to use freely programmable Javascript code to implement such more complex functionalities.
