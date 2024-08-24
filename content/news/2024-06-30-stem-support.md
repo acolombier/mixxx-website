@@ -8,13 +8,13 @@ Disclaimer: *The blog post primarily serves as the documentation for the [Google
 
 ## Explore New Creative Horizons with Mixxx's Latest Feature: Stem Mixing
 
-We are excited to introduce a major new feature in Mixxx: Stem Mixing. This innovative tool, inspired by Native Instruments' concept from their Traktor Pro software, allows you to separate and manipulate different elements of a track in real-time. But what exactly are stems?
+We're excited to bring a powerful new feature to Mixxx: Stem Mixing. While the concept of stems — separate audio tracks for different elements of a song — has been a staple in digital audio workstations (DAWs) for years, it’s now making its way into live DJing. Typically, a song is divided into stems like drums, bassline, harmony, and vocals. In a DAW, these individual tracks allow producers to have granular control during the production process.
 
-Stems are individual audio tracks that make up a complete song. Typically, a song is split into four main stems: drums, bassline, harmony, and vocals. By isolating these elements, you can remix, mashup, and edit tracks on the fly, providing a new level of flexibility and creativity in your DJ sets.
+Now, with Stem Mixing in Mixxx, you can take that same level of control into your DJ sets. Built on top of [Native Instrument' Open Specification](https://www.stems-music.com) This feature enables you to isolate and manipulate these elements in real-time, allowing for live remixing, mashups, and creative edits on the fly. Whether you’re blending two tracks together or creating entirely new soundscapes, Stem Mixing offers a new dimension of flexibility and creativity for your performances.
 
 Mixxx now supports Native Instruments stem files, the current public specification for this format. Whether you're an amateur DJ eager to experiment with new techniques or a professional looking to enhance your performances, Stem Mixing in Mixxx offers powerful new capabilities to elevate your mixes.
 
-# Paving the Way for AI-Generated Stems
+## Paving the Way for AI-Generated Stems
 
 The introduction of Stem Mixing in Mixxx is just the beginning of a revolutionary journey in DJing technology. This feature not only enhances your current capabilities but also sets the stage for future innovations, particularly in the realm of AI-generated stems. The Mixxx community is actively exploring ways to integrate artificial intelligence to create stems on the fly, pushing the boundaries of what’s possible in live DJ performances.
 
@@ -24,11 +24,63 @@ Imagine being able to instantly isolate vocals, drums, or other components from 
 
 This topic is currently very active and hotly debated in our community chat on Zulip. If you are interested in contributing to this effort or just want to stay updated on the latest developments, we invite you to [join the discussion](https://mixxx.zulipchat.com/#narrow/stream/109171-development/topic/stem.20separation/near/439520527). Your input and enthusiasm can help shape the future of Mixxx.
 
-
 ## How to quickly get started
 
-How to start using that feature, show casing of a few stem generator and demo with mine
+Currently, Mixxx does not yet support generating stems on the fly. However, there are ongoing discussions about enabling real-time stem creation or adding functionality to generate stem tracks directly within Mixxx.
 
-## A glimpse of it
+For now, you will need to create the NI stem files yourself. Fortunately, there are several ways to do this. If you're an audio producer, you can build the stems directly. Native Instruments provides [a tool](https://www.stems-music.com/stem-creator-tool/) for generating Stem files from a pre-mastered track along with the four stems that compose it. Note that while Native Instruments allows exporting unmastered stems with embedded mastering (limiter and compressor) applied on the fly, Mixxx does not yet support this feature. For better results in Mixxx, it is recommended to export your stems pre-mastered and disable the embedded mastering option.
 
-Live demo
+If you would like to convert your existing library, there are various options available online, often built around Meta's [demucs](https://github.com/facebookresearch/demucs) model. Unfortunately, many of these projects have licensing issues or significant limitations. While developing the stem feature, I created [a small command-line tool for generating stem tracks](https://github.com/acolombier/stemgen). It currently works on Linux and should also function with Linux containers on other platforms. I plan to continue maintaining it, with future goals of developing a more complete solution with a user interface and native support for Mac and Windows.
+
+### Generate stems from stereo tracks using stemgen and Docker
+
+> [Docker](https://www.docker.com/) is a platform that allows you to run applications in isolation from your system. Note that [stemgen](https://hub.docker.com/r/aclmb/stemgen) is available only as a Linux container. Linux containers are the default on Mac and Linux, but you will need to enable them on Windows.
+
+#### Step 1: Download the Container
+
+First, you’ll need to download the stemgen container to your machine. Open your terminal and run the following command:
+
+```sh
+docker pull aclmb/stemgen:latest
+```
+
+Please note that this container includes PyTorch for running Meta's model, as well as NVIDIA's CUDA libraries for GPU support. As a result, the container is quite large, so ensure you have at least 4 GiB of free space on your machine.
+
+> **Info:**  
+> If you are using a Linux machine with an NVIDIA graphics card, make sure to install the [NVIDIA container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+
+#### Step 2: Run the Stem Generation Process
+
+Once the container is downloaded, you can generate the stem file with the following command:
+
+```sh
+docker run -v /path/to/music/folder/:/path/to/music/folder/ -it --rm aclmb/stemgen:latest stemgen "/path/to/music/folder/My Music - Title.ext" /path/to/music/folder
+```
+
+*If you are using the NVIDIA container toolkit, you can add the `--gpus all` option after `--rm` like this:*
+
+```sh
+docker run -v /path/to/music/folder/:/path/to/music/folder/ -it --rm --gpus all aclmb/stemgen:latest stemgen "/path/to/music/folder/My Music - Title.ext" /path/to/music/folder
+```
+
+> **Tip:**  
+> You can customize the generated stem file using various command-line options. To see a list of available options, run the following command:
+> ```sh
+> docker run -it --rm aclmb/stemgen:latest stemgen --help
+> ```
+
+#### Step 3: Enjoy Your New Stem File
+
+That’s it! You should now have a file named `/path/to/music/folder/My Music - Title.stem.mp4` on your machine, ready to be played in Mixxx. If you encounter any issues, feel free to [start a new discussion on the project](https://github.com/acolombier/stemgen/discussions/categories/q-a).
+
+## What features are supported already?
+
+Here is a table that summarize the new stem features. Note that you may find more details and also get involved with the work in the [Github epic](https://github.com/mixxxdj/mixxx/issues/13116) dedicated to stem mixing.
+
+|                       |                     |
+|-----------------------|---------------------|
+| Gain control          | *Releasing in 2.6*  |
+| Quick FX              | *Releasing in 2.6*  |
+| Loading as sampler    | *Releasing in 2.6*  |
+| UI                    | *Scheduled for 2.6* |
+| Deck splitting        | *Planned*           |
