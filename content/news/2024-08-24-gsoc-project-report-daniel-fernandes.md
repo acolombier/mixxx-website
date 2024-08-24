@@ -1,8 +1,8 @@
 title: GSoC 2024 Project Report - Harmonic Mixing Enhancements
 authors: Daniel Fernandes
-status: draft
 tags: gsoc, harmonic mixing
 comments: yes
+date: 2024-08-24 07:50:11
 
 ## Introduction
 
