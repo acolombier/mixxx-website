@@ -14,6 +14,12 @@ Now, with Stem Mixing in Mixxx, you can take that same level of control into you
 
 Mixxx now supports Native Instruments stem files, the current public specification for this format. Whether you're an amateur DJ eager to experiment with new techniques or a professional looking to enhance your performances, Stem Mixing in Mixxx offers powerful new capabilities to elevate your mixes.
 
+## Empowering open standards
+
+Over the past few years, many DJing solutions have introduced their own proprietary standards for stems. While most of these formats can be reverse-engineered with relative ease, we wanted to support and encourage the open-source approach introduced by Native Instruments. We've extended the scope of that standard in Mixxx, allowing for more flexibility in audio formats. Unlike the original specification, which only supported AAC and ALAC (both proprietary codecs), Mixxx now supports a broader range of codecs. These include all the formats already compatible with Mixxx, such as AIFF, MP3, Opus, WAV, and WV. The only requirement is to use the same codec across all stems, keep the sample rate consistent parameter and use stereo.
+
+However, there are still some issues and limitations with the current standard, such as the lack of internationalization for labels. Rather than creating [yet another standard](https://imgs.xkcd.com/comics/standards_2x.png), we would prefer to contribute to improving the existing open specification from Native Instruments. If you are part of the NI team and are open to collaboration, we would love to help refine and expand this standard. Please feel free to [get in touch](https://mixxx.org/contact/) with us.
+
 ## Paving the Way for AI-Generated Stems
 
 The introduction of Stem Mixing in Mixxx is just the beginning of a revolutionary journey in DJing technology. This feature not only enhances your current capabilities but also sets the stage for future innovations, particularly in the realm of AI-generated stems. The Mixxx community is actively exploring ways to integrate artificial intelligence to create stems on the fly, pushing the boundaries of what’s possible in live DJ performances.
