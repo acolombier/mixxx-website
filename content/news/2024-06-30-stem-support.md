@@ -83,10 +83,12 @@ That’s it! You should now have a file named `/path/to/music/folder/My Music - 
 
 Here is a table that summarize the new stem features. Note that you may find more details and also get involved with the work in the [Github epic](https://github.com/mixxxdj/mixxx/issues/13116) dedicated to stem mixing.
 
-|                       |                     |
-|-----------------------|---------------------|
-| Gain control          | *Releasing in 2.6*  |
-| Quick FX              | *Releasing in 2.6*  |
-| Loading as sampler    | *Releasing in 2.6*  |
-| UI                    | *Scheduled for 2.6* |
-| Deck splitting        | *Planned*           |
+|                       |                     |                                                                                                                 |
+|-----------------------|---------------------|-----------------------------------------------------------------------------------------------------------------|
+| Engine support        | *Releasing in 2.6*  | [PR #1](https://github.com/mixxxdj/mixxx/pull/13044) and [PR #2](https://github.com/mixxxdj/mixxx/pull/13070)   |
+| Analyser support      | *Releasing in 2.6*  | [PR](https://github.com/mixxxdj/mixxx/pull/13106)                                                               |
+| Gain control          | *Releasing in 2.6*  | [PR](https://github.com/mixxxdj/mixxx/pull/13086)                                                               |
+| Quick FX              | *Releasing in 2.6*  | [PR](https://github.com/mixxxdj/mixxx/pull/13123)                                                               |
+| Loading as sampler    | *Releasing in 2.6*  | [PR](https://github.com/mixxxdj/mixxx/pull/13268)                                                               |
+| UI                    | *Scheduled for 2.6* | [PR](https://github.com/mixxxdj/mixxx/pull/13537)                                                               |
+| Deck splitting        | *Planned*           |                                                                                                                 |
