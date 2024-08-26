@@ -22,7 +22,7 @@ However, there are still some issues and limitations with the current standard, 
 
 ## Paving the Way for AI-Generated Stems
 
-The introduction of Stem Mixing in Mixxx is just the beginning of a revolutionary journey in DJing technology. This feature not only enhances your current capabilities but also sets the stage for future innovations, particularly in the realm of AI-generated stems. The Mixxx community is actively exploring ways to integrate artificial intelligence to create stems on the fly, pushing the boundaries of what’s possible in live DJ performances. However, there is still a long journey for it to happen, especially because of the challenge of supporting hardware acceleration, needed to perform stem separation in real-time.
+The introduction of Stem Mixing in Mixxx is just the beginning of a revolutionary journey in DJing technology. This feature not only enhances your current capabilities but also sets the stage for future innovations, particularly in the realm of AI-generated stems. The Mixxx community is actively exploring ways to integrate artificial intelligence to create stems on the fly, pushing the boundaries of what’s possible in live DJ performances. However, there is still a long journey for it to be ready, especially because of the challenge with supporting hardware acceleration, needed to perform stem separation in real-time.
 
 Competitors like Virtual DJ and Algoriddim’s djay Pro AI have already implemented AI-driven stem separation, allowing DJs to extract individual elements from any track in real-time. These advancements highlight the potential and ambition we have for Mixxx. Our goal is to provide DJs with the most cutting-edge tools to unlock new levels of creativity and performance.
 
@@ -83,12 +83,16 @@ That’s it! You should now have a file named `/path/to/music/folder/My Music - 
 
 Here is a table that summarize the new stem features. Note that you may find more details and also get involved with the work in the [Github epic](https://github.com/mixxxdj/mixxx/issues/13116) dedicated to stem mixing.
 
-|                       |                     |                                                                                                                 |
-|-----------------------|---------------------|-----------------------------------------------------------------------------------------------------------------|
-| Engine support        | *Releasing in 2.6*  | [PR #1](https://github.com/mixxxdj/mixxx/pull/13044) and [PR #2](https://github.com/mixxxdj/mixxx/pull/13070)   |
-| Analyser support      | *Releasing in 2.6*  | [PR](https://github.com/mixxxdj/mixxx/pull/13106)                                                               |
-| Gain control          | *Releasing in 2.6*  | [PR](https://github.com/mixxxdj/mixxx/pull/13086)                                                               |
-| Quick FX              | *Releasing in 2.6*  | [PR](https://github.com/mixxxdj/mixxx/pull/13123)                                                               |
-| Loading as sampler    | *Releasing in 2.6*  | [PR](https://github.com/mixxxdj/mixxx/pull/13268)                                                               |
-| UI                    | *Scheduled for 2.6* | [PR](https://github.com/mixxxdj/mixxx/pull/13537)                                                               |
-| Deck splitting        | *Planned*           |                                                                                                                 |
+|                       |                     |                                                          |
+|-----------------------|---------------------|----------------------------------------------------------|
+| File   support        | *Releasing in 2.6*  | [PR #13044](https://github.com/mixxxdj/mixxx/pull/13044) |
+| Engine support        | *Releasing in 2.6*  | [PR #13070](https://github.com/mixxxdj/mixxx/pull/13070) |
+| Multithreaded scaling | *Releasing in 2.6*  | [PR #13143](https://github.com/mixxxdj/mixxx/pull/13143) |
+| Analyser support      | *Releasing in 2.6*  | [PR #13106](https://github.com/mixxxdj/mixxx/pull/13106) |
+| Gain control          | *Releasing in 2.6*  | [PR #13086](https://github.com/mixxxdj/mixxx/pull/13086) |
+| Quick FX              | *Releasing in 2.6*  | [PR #13123](https://github.com/mixxxdj/mixxx/pull/13123) |
+| Loading as sampler    | *Releasing in 2.6*  | [PR #13268](https://github.com/mixxxdj/mixxx/pull/13268) |
+| UI                    | *Scheduled for 2.6* | [PR #13537](https://github.com/mixxxdj/mixxx/pull/13537) |
+| Deck splitting        | *Planned*           |                                                          |
+
+*`Releasing` implies that the PR is merged, `Scheduled` implies work in progress, near completion and `Planned` implies that this still left to do.*
