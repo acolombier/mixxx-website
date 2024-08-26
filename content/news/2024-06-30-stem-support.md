@@ -2,7 +2,7 @@ title: "GSoC 2024: Adding STEM mixing support"
 authors: Antoine Colombier
 tags: gsoc, gsoc-2024, improvements
 slug: STEM-Mixing
-date: 2024-06-30 12:00:00
+date: 2024-08-26 12:00:00
 
 Disclaimer: *The blog post primarily serves as the documentation for the [Google Summer of Code](https://summerofcode.withgoogle.com/) 2024 project: "Multi channel mixing support (STEMS)".*
 
