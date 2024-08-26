@@ -91,7 +91,7 @@ Here is a table that summarize the new stem features. Note that you may find mor
 | Analyser support      | *Releasing in 2.6*  | [PR #13106](https://github.com/mixxxdj/mixxx/pull/13106) |
 | Gain control          | *Releasing in 2.6*  | [PR #13086](https://github.com/mixxxdj/mixxx/pull/13086) |
 | Quick FX              | *Releasing in 2.6*  | [PR #13123](https://github.com/mixxxdj/mixxx/pull/13123) |
-| Loading as sampler    | *Releasing in 2.6*  | [PR #13268](https://github.com/mixxxdj/mixxx/pull/13268) |
+| Loading as sampler    | *Scheduled in 2.6*  | [PR #13268](https://github.com/mixxxdj/mixxx/pull/13268) |
 | UI                    | *Scheduled for 2.6* | [PR #13537](https://github.com/mixxxdj/mixxx/pull/13537) |
 | Deck splitting        | *Planned*           |                                                          |
 
