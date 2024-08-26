@@ -21,6 +21,8 @@ It is also possible to load a single stem or set of them into sampler. Coupled w
 [![Stem Mixxing]({static}/images/news/stem_sampler_loading.png)]({static}/images/news/stem_sampler_loading.png)
 [![Stem Mixxing]({static}/images/news/stem_sample_with_saved_loop.png)]({static}/images/news/stem_sample_with_saved_loop.png)
 
+Please note that although we worked on improving the engine performance, stem mixing is still very resource-greedy, so do make sure your machine has enough CPU power to perform live stems mixing.
+
 ## Empowering open standards
 
 Over the past few years, many DJing solutions have introduced their own proprietary standards for stems. While most of these formats can be reverse-engineered with relative ease, we wanted to support and encourage the open-source approach introduced by Native Instruments. We've extended the scope of that standard in Mixxx, allowing for more flexibility in audio formats. Unlike the original specification, which only supported AAC and ALAC, Mixxx now supports a broader range of codecs. These include all the formats already compatible with Mixxx, such as AIFF, MP3, Opus, WAV, and WV. The only requirement is to use the same codec across all stems, keep the sample rate consistent parameter and use stereo.
@@ -29,13 +31,13 @@ However, there are still some issues and limitations with the current standard, 
 
 ## Paving the Way for AI-Generated Stems
 
-The introduction of Stem Mixing in Mixxx is just the beginning of a revolutionary journey in DJing technology. This feature not only enhances your current capabilities but also sets the stage for future innovations, particularly in the realm of AI-generated stems. The Mixxx community is actively exploring ways to integrate artificial intelligence to create stems on the fly, pushing the boundaries of what’s possible in live DJ performances. However, there is still a long journey for it to be ready, especially because of the challenge with supporting hardware acceleration, needed to perform stem separation in real-time.
+The introduction of Stem Mixing in Mixxx is just the beginning of a revolutionary journey in DJing technology. This feature not only enhances your current capabilities but also sets the stage for future innovations, particularly in the realm of AI-generated stems. The Mixxx community is actively exploring ways to integrate artificial intelligence to create stems on the fly, pushing the boundaries of what’s possible in live DJ performances.
 
 Competitors like Virtual DJ and Algoriddim’s djay Pro AI have already implemented AI-driven stem separation, allowing DJs to extract individual elements from any track in real-time. These advancements highlight the potential and ambition we have for Mixxx. Our goal is to provide DJs with the most cutting-edge tools to unlock new levels of creativity and performance.
 
 Imagine being able to instantly isolate vocals, drums, or other components from any track in your library, regardless of its original format. This capability would not only streamline the preparation process but also open up endless possibilities for live remixing and mashups. As the Mixxx community continues to develop and refine AI-driven features, we are committed to bringing these powerful tools to our users, ensuring that Mixxx remains at the forefront of DJing technology.
 
-This topic is currently very active and hotly debated in our community chat on Zulip. If you are interested in contributing to this effort or just want to stay updated on the latest developments, we invite you to [join the discussion](https://mixxx.zulipchat.com/#narrow/stream/109171-development/topic/stem.20separation/near/439520527). Your input and enthusiasm can help shape the future of Mixxx.
+However, there is still a long journey for it to be ready, especially because of the challenge with supporting hardware acceleration, needed to perform stem separation in real-time. This topic is currently very active and hotly debated in our community chat on Zulip. If you are interested in contributing to this effort or just want to stay updated on the latest developments, we invite you to [join the discussion](https://mixxx.zulipchat.com/#narrow/stream/109171-development/topic/stem.20separation/near/439520527). Your input and enthusiasm can help shape the future of Mixxx.
 
 ## How to quickly get started
 
