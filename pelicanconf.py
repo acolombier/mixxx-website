@@ -269,6 +269,18 @@ AUTHOR_METADATA = {
         "email": "Evelynne@protonmail.com",
         "tagline": "Enthusiastic Mixxx-er",
     },
+    "Daniel Fernandes": {
+        "github": "danferns",
+        "discourse": "danferns",
+        "email": "dannywritescode@gmail.com",
+        "tagline": "GSoC 2024 Student",
+    },
+    "Jörg Wartenberg": {
+        "github": "JoergAtGithub",
+        "discourse": "DJ_D-Town",
+        "email": "joerg.wartenberg@mixxx.org",
+        "tagline": "Mixxx Core Developer",
+    },
     "Antoine Colombier": {
         "github": "acolombier",
         "email": "mixxx@acolombier.dev",
