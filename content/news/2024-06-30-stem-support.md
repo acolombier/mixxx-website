@@ -96,3 +96,5 @@ Here is a table that summarize the new stem features. Note that you may find mor
 | Deck splitting        | *Planned*           |                                                          |
 
 *`Releasing` implies that the PR is merged, `Scheduled` implies work in progress, near completion and `Planned` implies that this still left to do.*
+
+If you which to try the stem capabilities before the 2.6 beta gets released, you may [build Mixxx](https://github.com/mixxxdj/mixxx?tab=readme-ov-file#building-mixxx) using the CMake option `FFMPEG` and `STEM`.
