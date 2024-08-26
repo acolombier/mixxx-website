@@ -17,8 +17,10 @@ Mixxx now supports Native Instruments stem files, the current public specificati
 For example, it becomes piece of cake to mixxx the vocals of track with another instrumental version.
 [![Stem Mixxing]({static}/images/news/stem_mixing.png)]({static}/images/news/stem_mixing.png)
 
-It is also possible to load a single stem or set of them into sampler. Coupled with saved loop, it makes it pretty trivial to isolate that catchy voice line or a great saxophone sample.
+It is also possible to load a single stem or set of them into sampler.
 [![Stem Mixxing]({static}/images/news/stem_sampler_loading.png)]({static}/images/news/stem_sampler_loading.png)
+
+Coupled with saved loop, it makes it pretty trivial to isolate that catchy voice line or a great saxophone sample!
 [![Stem Mixxing]({static}/images/news/stem_sample_with_saved_loop.png)]({static}/images/news/stem_sample_with_saved_loop.png)
 
 Please note that although we worked on improving the engine performance, stem mixing is still very resource-greedy, so do make sure your machine has enough CPU power to perform live stems mixing.
