@@ -14,6 +14,13 @@ Now, with Stem Mixing in Mixxx, you can take that same level of control into you
 
 Mixxx now supports Native Instruments stem files, the current public specification for this format. Whether you're an amateur DJ eager to experiment with new techniques or a professional looking to enhance your performances, Stem Mixing in Mixxx offers powerful new capabilities to elevate your mixes.
 
+For example, it becomes piece of cake to mixxx the vocals of track with another instrumental version.
+[![Stem Mixxing]({static}/images/news/stem_mixing.png)]({static}/images/news/stem_mixing.png)
+
+It is also possible to load a single stem or set of them into sampler. Coupled with saved loop, it makes it pretty trivial to isolate that catchy voice line or a great saxophone sample.
+[![Stem Mixxing]({static}/images/news/stem_sampler_loading.png)]({static}/images/news/stem_sampler_loading.png)
+[![Stem Mixxing]({static}/images/news/stem_sample_with_saved_loop.png)]({static}/images/news/stem_sample_with_saved_loop.png)
+
 ## Empowering open standards
 
 Over the past few years, many DJing solutions have introduced their own proprietary standards for stems. While most of these formats can be reverse-engineered with relative ease, we wanted to support and encourage the open-source approach introduced by Native Instruments. We've extended the scope of that standard in Mixxx, allowing for more flexibility in audio formats. Unlike the original specification, which only supported AAC and ALAC, Mixxx now supports a broader range of codecs. These include all the formats already compatible with Mixxx, such as AIFF, MP3, Opus, WAV, and WV. The only requirement is to use the same codec across all stems, keep the sample rate consistent parameter and use stereo.
