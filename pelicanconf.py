@@ -269,6 +269,11 @@ AUTHOR_METADATA = {
         "email": "Evelynne@protonmail.com",
         "tagline": "Enthusiastic Mixxx-er",
     },
+    "Antoine Colombier": {
+        "github": "acolombier",
+        "email": "mixxx@acolombier.dev",
+        "tagline": "Mixxx Contributor",
+    },
 }
 
 # Needed for Jinja2 markdown filter
