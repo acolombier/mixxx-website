@@ -1,6 +1,6 @@
 title: Midsummer Mixxx
 authors: Evelynne Veys
-tags: summer, info, news, update, harmonic, key, stem
+tags: harmonic mixing, stems
 comments: yes
 date: 2024-07-31 17:18:23
 
