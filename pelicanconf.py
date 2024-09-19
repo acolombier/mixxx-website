@@ -284,7 +284,7 @@ AUTHOR_METADATA = {
     "Antoine Colombier": {
         "github": "acolombier",
         "email": "mixxx@acolombier.dev",
-        "tagline": "Mixxx Contributor",
+        "tagline": "Mixxx Core Developer",
     },
 }
 
