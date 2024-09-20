@@ -1,6 +1,6 @@
 title: Midsummer Mixxx
 authors: Evelynne Veys
-tags: summer, info, news, update, harmonic, key, stem
+tags: harmonic mixing, stems
 comments: yes
 date: 2024-07-31 17:18:23
 
@@ -53,9 +53,9 @@ working and can be experimental mapped in controller mappings.
 
 DJ-ing with stems is a gamechanger, it takes away limitations, gives your creativity a boost.
 A hint: controlling stems with the mouse is rather difficult, some controllers are already stems-ready which means they incorporated
-volume encoders and mute buttons for the different stem tracks. But don't throw away your valuable controller.
+volume potentiometers and mute buttons for the different stem tracks. But don't throw away your valuable controller.
 I have experimented successful creating a OSC midi controller to control stems (and samplers) from a tablet, when finished the files will be available.
-Or you can start looking for an extra midi-controller that has enough encoders to control the volume and mute buttons of the stems (advice: 4 encoders, 4 mute buttons maybe encoders for the effect on the stem-track and buttons to select the deck).
+Or you can start looking for an extra midi-controller that has enough potentiometers to control the volume and mute buttons of the stems (advice: 4 volume potentiometers, 4 mute buttons maybe 4 potentiometers for the effect on the stem-track and buttons to select the deck).
 
 If you're waiting for an official release with stem support, you'll have to be more patient.
 
