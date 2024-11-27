@@ -2,7 +2,7 @@ title: Mixxx 2.4.2 Release Announcement
 authors: Evelynne Veys
 tags: 2.4, 2.4.2, release announcement
 comments: yes
-status: draft
+date: 2024-11-27 07:56:41
 
 #### Winter and Summer are coming
 
@@ -141,4 +141,3 @@ Problems that were solved:
   [#13715](https://github.com/mixxxdj/mixxx/pull/13715)
 
 Updated Controller Mappings: Denon MC7000, Korg Kaoss DJ, Novation Dicer, Novation Launchpad X, Numark PartyMix and Scratch, Pioneer DDJ-400 and DDJ-FLX4, Reloop Beatmix 2/4, Mixage MK1 and MK2, Sony SIXAXIS
-date: 2024-11-27 07:56:41
