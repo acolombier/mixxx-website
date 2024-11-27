@@ -133,7 +133,10 @@ def main(argv=None):
                     continue
 
                 with open(
-                    filepath, mode="r", encoding="utf-8", newline="\n"
+                    filepath,
+                    mode="r",
+                    encoding="utf-8",
+                    newline=None,  # translate any \r\n to \n during read
                 ) as fp:
                     header, sep, body = fp.read().partition("\n\n")
                     if not RE_POST_STATUS.findall(header):
