@@ -12,13 +12,16 @@ versions:
         text: |
           Due to signing issues, we can`t provide a signed 2.5.0 release now. In the meantime please use 2.5-beta-152 which uses already the final source code of Mixxx 2.5.0..
 
-          [Download](https://downloads.mixxx.org/snapshots/2.5/mixxx-2.5-beta-152-g70d7999549-win64.msi)
-
           [2.5-beta-152-g70d7999549](https://github.com/mixxxdj/mixxx/commit/70d799954931e0cbd5db2404a598c941941ce2d2)
 
           [sha256sum](https://downloads.mixxx.org/snapshots/2.5/mixxx-2.5-beta-152-g70d7999549-win64.msi.sha256sum)
 
           [Build Date Sat 21 December 2024 16:44](https://github.com/mixxxdj/mixxx/actions/runs/12446735096)
+
+        packages:
+          - slug: win64
+            name: Windows
+            file_url: https://downloads.mixxx.org/snapshots/2.5/mixxx-2.5-beta-152-g70d7999549-win64.msi
 
       - slug: macos
         os: macOS 11 or later
