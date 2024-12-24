@@ -3,26 +3,37 @@ title: Download
 template: pages/download
 versions:
   stable:
-    name: 2.4.2
-    release_announcement: /news/2024-11-27-mixxx-2-4-2-released/
-    download_manifest: https://downloads.mixxx.org/releases/2.4.2/manifest.json
+    name: 2.5.0
+    release_announcement: /news/2024-12-24-mixxx-2_5-released/
+    download_manifest: https://downloads.mixxx.org/releases/2.5.0/manifest.json
     downloads:
       - slug: windows
-        os: Windows 7 or later
+        os: Windows 10 build 1809 or later
+        text: |
+          Due to signing issues, we can`t provide a signed 2.5.0 release now. In the meantime please use 2.5-beta-152 which uses already the final source code of Mixxx 2.5.0..
+
+          [2.5-beta-152-g70d7999549](https://github.com/mixxxdj/mixxx/commit/70d799954931e0cbd5db2404a598c941941ce2d2)
+
+          [sha256sum](https://downloads.mixxx.org/snapshots/2.5/mixxx-2.5-beta-152-g70d7999549-win64.msi.sha256sum)
+
+          [Build Date Sat 21 December 2024 16:44](https://github.com/mixxxdj/mixxx/actions/runs/12446735096)
+
         packages:
           - slug: win64
-            name: 64-Bit
+            name: Windows
+            file_url: https://downloads.mixxx.org/snapshots/2.5/mixxx-2.5-beta-152-g70d7999549-win64.msi
+
       - slug: macos
-        os: macOS 10.12 or later
+        os: macOS 11 or later
         text: |
-          Download Mixxx 2.4.2 for Intel macOS 10.12 or later or for ARM macOS 11.0 or later (Apple Silicon M1/M2/M3). You can check which version you need by clicking the Apple logo in the menu bar, then "About this Mac". If the window displays an "Apple M..." chip, download the ARM build, otherwise you need the Intel build.
+          Download Mixxx 2.5.0 for Intel macOS 10.12 or later or for ARM macOS 11.0 or later (Apple Silicon M1/M2/M3). You can check which version you need by clicking the Apple logo in the menu bar, then "About this Mac". If the window displays an "Apple M..." chip, download the ARM build, otherwise you need the Intel build.
         packages:
         - slug: macosintel
           name: Intel
         - slug: macosarm
           name: ARM
       - slug: ubuntu
-        os: Ubuntu 20.04 "Focal Fossa" or later
+        os: Ubuntu 22.04 "Jammy Jellyfish" or later
         text: |
           We provide a [PPA on Launchpad](https://launchpad.net/~mixxx/+archive/mixxx) to make installing install the latest stable version of Mixxx as easy as possible.
           Open a terminal, and enter:
@@ -71,68 +82,16 @@ versions:
 
               git clone -b 2.4 https://github.com/mixxxdj/mixxx.git
 
-          The 2.4.2 release has been [tagged](https://github.com/mixxxdj/mixxx/releases/tag/2.4.2) with `2.4.2`.
+          The 2.5.0 release has been [tagged](https://github.com/mixxxdj/mixxx/releases/tag/2.5.0) with `2.5.0`.
 
           Compilation instructions are available for [Windows](https://github.com/mixxxdj/mixxx/wiki/Compiling-On-Windows), [macOS](https://github.com/mixxxdj/mixxx/wiki/Compiling-on-macOS), and [Linux](https://github.com/mixxxdj/mixxx/wiki/Compiling-On-Linux).
         packages:
         - slug: source
-          name: 2.4 branch
-          file_url: https://github.com/mixxxdj/mixxx/archive/2.4.zip
-        - slug: source
-          name: 2.4.2 release
-          file_url: https://github.com/mixxxdj/mixxx/archive/2.4.2.tar.gz
-  beta:
-    name: 2.5-beta
-    release_announcement: /news/2024-06-11-mixxx-2-5-beta-released
-    title: Beta Snapshots (2.5)
-    text: |
-      A great way to contribute to Mixxx is testing the upcoming version before it is being released.
-      The Mixxx team relies on a significant number of users switching to the beta version and using it at home.
-      This is the only way to find bugs in time before a release that may have slipped through the initial review process or affect rare use cases.
-
-      **Beta snapshots are not intended for live use!** Expect crashes and make sure to back up your Mixxx settings and library before upgrading as explained in the [Testing wiki page](https://github.com/mixxxdj/mixxx/wiki/Testing).
-    download_manifest: https://downloads.mixxx.org/snapshots/2.5/manifest.json
-    downloads:
-      - slug: windows
-        os: Windows 10 (1809 or later)
-        packages:
-          - slug: win64
-            name: 64-Bit
-      - slug: macos
-        os: macOS 11 or later
-        text: |
-          Download Mixxx 2.5-alpha for macOS 11 or later for Intel or ARM (Apple Silicon M1/M2/M3). You can check which version you need by clicking the Apple logo in the menu bar, then "About this Mac". If the window displays an "Apple M..." chip, download the ARM build, otherwise you need the Intel build.
-        packages:
-        - slug: macosintel
-          name: Intel
-        - slug: macosarm
-          name: ARM
-      - slug: ubuntu
-        os: Ubuntu 22.04 "Jammy Jellyfish" or later
-        text: |
-          We provide a [PPA on Launchpad](https://launchpad.net/~mixxx/+archive/ubuntu/mixxxbetas) to make installing the latest development snapshot of Mixxx as easy as possible.
-          Open a terminal, and enter:
-
-              $ sudo add-apt-repository ppa:mixxx/mixxxbetas
-              $ sudo apt update
-              $ sudo apt install mixxx
-
-          Using the PPA ensures that new package versions will be installed automatically with `apt`. Otherwise, you can [download individual packages](https://launchpad.net/~mixxx/+archive/ubuntu/mixxxbetas/+packages) and install them manually.
-      - slug: source
-        name: Source Code
-        icon: terminal.svg
-        text: |
-          The Mixxx source code is published under the GNU General Public License (GPL) v2 or later. Please check the `LICENSE` file in our source tree for complete licensing information.
-
-          Download the beta code from Mixxx's `2.5` branch on [GitHub](https://github.com/mixxxdj/mixxx/tree/2.5) by opening a terminal and running:
-
-              git clone -b 2.5 https://github.com/mixxxdj/mixxx.git
-
-          Compilation instructions are available for [Windows](https://github.com/mixxxdj/mixxx/wiki/Compiling-On-Windows), [macOS](https://github.com/mixxxdj/mixxx/wiki/Compiling-On-macOS), and [Linux](https://github.com/mixxxdj/mixxx/wiki/Compiling-On-Linux).
-        packages:
-        - slug: source
           name: 2.5 branch
           file_url: https://github.com/mixxxdj/mixxx/archive/2.5.zip
+        - slug: source
+          name: 2.5.0 release
+          file_url: https://github.com/mixxxdj/mixxx/archive/2.5.0.tar.gz
   testing:
     name: 2.6-alpha
     title: Development Snapshots
@@ -197,9 +156,9 @@ versions:
           name: main branch
           file_url: https://github.com/mixxxdj/mixxx/archive/main.zip
   previous:
-    name: 2.3.6
-    release_announcement: /news/2023-08-15-mixxx-2-3-6-released/
-    download_manifest: https://downloads.mixxx.org/releases/2.3.6/manifest.json
+    name: 2.4.2
+    release_announcement: /news/2024-11-27-mixxx-2-4-2-released/
+    download_manifest: https://downloads.mixxx.org/releases/2.4.2/manifest.json
     downloads:
       - slug: windows
         os: Windows 7 or later
@@ -209,12 +168,12 @@ versions:
       - slug: macos
         os: macOS 10.12 or later
         text: |
-          Download Mixxx 2.3.6 for Intel macOS 10.12 or later. This also runs with Rosetta 2 on ARM macOS (Apple Silicon).
+          Download Mixxx 2.4.2 for Intel macOS 10.12 or later. This also runs with Rosetta 2 on ARM macOS (Apple Silicon).
         packages:
         - slug: macosintel
           name: Intel
       - slug: ubuntu
-        os: Ubuntu 18.04 "Bionic Beaver" or later
+        os: Ubuntu 20.04 "Focal Fossa" or later
         text: |
           We provide a [PPA on Launchpad](https://launchpad.net/~mixxx/+archive/mixxx) to make installing install the latest stable version of Mixxx as easy as possible.
           Open a terminal, and enter:
@@ -249,18 +208,18 @@ versions:
         text: |
           The Mixxx source code is published under the GNU General Public License (GPL) v2 or later. Please check the `LICENSE` file in our source tree for complete licensing information.
 
-          Download the latest code from Mixxx's `2.3` branch on [GitHub](https://github.com/mixxxdj/mixxx/tree/2.3) by opening a terminal and running:
+          Download the latest code from Mixxx's `2.4` branch on [GitHub](https://github.com/mixxxdj/mixxx/tree/2.4) by opening a terminal and running:
 
-              git clone -b 2.3 https://github.com/mixxxdj/mixxx.git
+              git clone -b 2.4 https://github.com/mixxxdj/mixxx.git
 
-          The 2.3.6 release has been [tagged](https://github.com/mixxxdj/mixxx/releases/tag/2.3.6) with `2.3.6`.
+          The 2.4.2 release has been [tagged](https://github.com/mixxxdj/mixxx/releases/tag/2.4.2) with `2.4.2`.
 
           Compilation instructions are available for [Windows](https://github.com/mixxxdj/mixxx/wiki/Compiling-On-Windows), [macOS](https://github.com/mixxxdj/mixxx/wiki/Compiling-On-macOS), and [Linux](https://github.com/mixxxdj/mixxx/wiki/Compiling-On-Linux).
         packages:
         - slug: source
-          name: 2.3 branch
-          file_url: https://github.com/mixxxdj/mixxx/archive/2.3.zip
+          name: 2.4 branch
+          file_url: https://github.com/mixxxdj/mixxx/archive/2.4.zip
         - slug: source
-          name: 2.3.6 release
-          file_url: https://github.com/mixxxdj/mixxx/archive/2.3.6.tar.gz
+          name: 2.4.2 release
+          file_url: https://github.com/mixxxdj/mixxx/archive/2.4.2.tar.gz
 ...
