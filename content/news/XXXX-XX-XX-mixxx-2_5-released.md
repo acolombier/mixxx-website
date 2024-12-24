@@ -97,7 +97,7 @@ Unwrap your gift, [the complete changelog 2.5](https://github.com/mixxxdj/mixxx/
 
 #### All gift-giving
 
-You can find the whole of gift-giving in details in the [CHANGELOG](https://github.com/mixxxdj/mixxx/blob/89ff013bcc933fb72c0a52d85024e84765ad9c58/CHANGELOG.md)
+You can find the whole of gift-giving in details in the [CHANGELOG](https://github.com/mixxxdj/mixxx/blob/2.5.0/CHANGELOG.md)
 Here some sparkles:
 
 ##### Modernized Platform: Update to Qt6
