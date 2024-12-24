@@ -93,11 +93,7 @@ Mic drop, "Light the Candles All Around the World"
 #### ... and a happy 2.5
 
 Start using your brand new toy, grab it from the [Download page](https://mixxx.org/download/).
-Unwrap your gift, [the complete changelog 2.5](https://github.com/mixxxdj/mixxx/blob/2.5/CHANGELOG.md)
-
-#### All gift-giving
-
-You can find the whole of gift-giving in details in the [CHANGELOG](https://github.com/mixxxdj/mixxx/blob/2.5.0/CHANGELOG.md)
+Unwrap your gift, [the complete changelog 2.5.0](https://github.com/mixxxdj/mixxx/blob/2.5.0/CHANGELOG.md)
 Here some sparkles:
 
 ##### Modernized Platform: Update to Qt6
