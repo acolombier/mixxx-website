@@ -78,9 +78,9 @@ versions:
         text: |
           The Mixxx source code is published under the GNU General Public License (GPL) v2 or later. Please check the `LICENSE` file in our source tree for complete licensing information.
 
-          Download the latest code from Mixxx's `2.4` branch on [GitHub](https://github.com/mixxxdj/mixxx/tree/2.4) by opening a terminal and running:
+          Download the latest code from Mixxx's `2.5` branch on [GitHub](https://github.com/mixxxdj/mixxx/tree/2.5) by opening a terminal and running:
 
-              git clone -b 2.4 https://github.com/mixxxdj/mixxx.git
+              git clone -b 2.5 https://github.com/mixxxdj/mixxx.git
 
           The 2.5.0 release has been [tagged](https://github.com/mixxxdj/mixxx/releases/tag/2.5.0) with `2.5.0`.
 
