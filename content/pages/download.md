@@ -26,7 +26,7 @@ versions:
       - slug: macos
         os: macOS 11 or later
         text: |
-          Download Mixxx 2.5.0 for Intel macOS 10.12 or later or for ARM macOS 11.0 or later (Apple Silicon M1/M2/M3). You can check which version you need by clicking the Apple logo in the menu bar, then "About this Mac". If the window displays an "Apple M..." chip, download the ARM build, otherwise you need the Intel build.
+          Download Mixxx 2.5.0 for macOS 11 or later for Intel or ARM (Apple Silicon M1/M2/M3). You can check which version you need by clicking the Apple logo in the menu bar, then "About this Mac". If the window displays an "Apple M..." chip, download the ARM build, otherwise you need the Intel build.
         packages:
         - slug: macosintel
           name: Intel
