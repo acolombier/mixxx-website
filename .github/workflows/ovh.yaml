@@ -1,0 +1,135 @@
+name: Reusable Deploy
+
+on:
+  workflow_call:
+    inputs:
+      environment_name:
+        required: true
+        type: string
+      environment_url:
+        required: false
+        type: string
+      target:
+        required: false
+        type: string
+        default: 'www'
+      base:
+        required: false
+        type: string
+        default: ''
+      action:
+        required: false
+        type: string
+        default: 'deploy' # Or 'teardown'
+    secrets:
+      OVH_USERNAME:
+        required: true
+      OVH_HOSTNAME:
+        required: true
+      OVH_PASSWORD:
+        required: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: website-ovh
+    environment:
+      name: ${{ inputs.environment_name }}
+      url: ${{ inputs.environment_url }}
+    steps:
+    - name: Check out repository
+      if: ${{ inputs.action != 'teardown' }}
+      uses: actions/checkout@v4.2.2
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      if: ${{ inputs.action != 'teardown' }}
+      uses: actions/setup-python@v6
+      with:
+        python-version: 3.12
+        cache: 'pip' # caching pip dependencies
+    - name: Install Python dependencies
+      if: ${{ inputs.action != 'teardown' }}
+      run: |
+        pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y sshfs
+    - name: Build
+      if: ${{ inputs.action != 'teardown' }}
+      env:
+        BASE: ${{ inputs.base }}
+      run: |
+        pelican -e SITEURL="\"$BASE\""
+        sed -E '/\{% (end)?verbatim %\}/d' htaccess > ./output/.htaccess
+        # Migrated from netlify.toml
+        cat >> ./output/.htaccess <<EOF
+        <IfModule mod_headers.c>
+          # Global security headers
+          Header set Content-Security-Policy "default-src 'self'; style-src 'self'; script-src 'self'"
+          Header set Permissions-Policy "ambient-light-sensor=(); autoplay=(); accelerometer=(); camera=(); display-capture=(); document-domain=(); encrypted-media=(); fullscreen=(); gyroscope=(); magnetometer=(); microphone=(); midi=(); payment=(); picture-in-picture=(); sync-xhr=(); usb=(); wake-lock=(); xr-spatial-tracking=()"
+          Header set Referrer-Policy "no-referrer-when-downgrade"
+          Header set X-Content-Type-Options "nosniff"
+          Header set X-Frame-Options "DENY"
+          Header set X-XSS-Protection "1; mode=block"
+
+          # Override CSP for /news/* pages
+          SetEnvIf Request_URI "^/news/" is_news
+          Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-UPkidoMErzWw1gW/eY4LhAi9ZkPch3PP31d6KQoJ6Yc=' 'sha256-G40wI6OaLZXCtrb02xUq1H1kEVWjstzoQ0FXKwsWxPw=' 'sha256-1CldwzdEg2k1wTmf7s5RWVd7NMXI/7nxxjJM2C4DqII=' https://mixxx.discourse.group/javascripts/embed.js *.discourse-cdn.com; frame-src 'self' https://www.youtube-nocookie.com https://mixxx.discourse.group ; img-src 'self' https://i.ytimg.com https://raw.githubusercontent.com/mixxxdj/ ; connect-src 'self' https://mixxx.discourse.group https://*.discourse-cdn.com" env=is_news
+        </IfModule>
+        EOF
+        sed -E '/\{% (end)?verbatim %\}/d' content/robots.txt > ./output/robots.txt
+    - name: Deploy website
+      if: ${{ inputs.action != 'teardown' }}
+      env:
+        OVH_USERNAME: ${{ secrets.OVH_USERNAME }}
+        OVH_HOSTNAME: ${{ secrets.OVH_HOSTNAME }}
+        OVH_PASSWORD: ${{ secrets.OVH_PASSWORD }}
+        TARGET: ${{ inputs.target }}
+      run: |
+        set -exo pipefail
+        mkdir -p ${HOME}/.ssh/
+        mkdir -p /tmp/ovh_sshfs
+        ssh-keyscan "${OVH_HOSTNAME}" >> "${HOME}/.ssh/known_hosts"
+        sshfs "${OVH_USERNAME}@${OVH_HOSTNAME}:/home/${OVH_USERNAME}" \
+          /tmp/ovh_sshfs \
+          -o ssh_command="sshpass -p ${OVH_PASSWORD} ssh" \
+          -o kernel_cache \
+          -o attr_timeout=600 \
+          -o entry_timeout=600 \
+          -o negative_timeout=600 \
+          -o compression=no \
+          -o PreferredAuthentications=password \
+          -o Ciphers=aes128-gcm@openssh.com \
+          -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 \
+          -o max_conns=4
+        if [ ! "/tmp/ovh_sshfs/www/" = "/tmp/ovh_sshfs/www/${TARGET}" ] && [ ! -d "/tmp/ovh_sshfs/www/${TARGET}" ]; then
+          pushd /tmp/ovh_sshfs/www
+          find . -not \( -path './preview*' -prune \) -type d | xargs -P32 -I{} mkdir -p "./${TARGET}/{}"
+          find . -not \( -path './preview*' -prune \) -not -type d | xargs -P32 -I{} ln -s /tmp/ovh_sshfs/www/{} "/tmp/ovh_sshfs/www/${TARGET}/{}"
+          popd
+          rsync --verbose --recursive --checksum --delete --delay-updates --link-dest="/tmp/ovh_sshfs/www" ./output/ "/tmp/ovh_sshfs/www/${TARGET}"
+        else
+          rsync --verbose --recursive --checksum --delete --delay-updates --exclude=preview ./output/ "/tmp/ovh_sshfs/www/${TARGET}"
+        fi
+        fusermount -u /tmp/ovh_sshfs
+    - name: Delete website
+      if: ${{ inputs.action == 'teardown' }}
+      env:
+        OVH_USERNAME: ${{ secrets.OVH_USERNAME }}
+        OVH_HOSTNAME: ${{ secrets.OVH_HOSTNAME }}
+        OVH_PASSWORD: ${{ secrets.OVH_PASSWORD }}
+        TARGET: ${{ inputs.target }}
+      run: |
+        set -exo pipefail
+        mkdir -p ${HOME}/.ssh/
+        mkdir -p /tmp/ovh_sshfs
+        ssh-keyscan "${OVH_HOSTNAME}" >> "${HOME}/.ssh/known_hosts"
+        sshfs "${OVH_USERNAME}@${OVH_HOSTNAME}:/home/${OVH_USERNAME}" \
+          /tmp/ovh_sshfs \
+          -o ssh_command="sshpass -p ${OVH_PASSWORD} ssh -o PreferredAuthentications=password" \
+          -o max_conns=16 &
+        rm -rf "/tmp/ovh_sshfs/www/${TARGET}"
+        kill %1
